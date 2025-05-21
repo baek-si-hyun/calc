@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import { slideItem } from '../../../data/staticData';
 import useWindowWidth from '../../../hooks/useWindowWidth';
 import PreparingModal from '@/components/modal/PreparingModal';
+import Image from 'next/image';
 
 export default function MainSlider() {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -51,10 +52,12 @@ export default function MainSlider() {
                     setShowPreparingModal(true);
                   }
                 }}>
-                <img
+                <Image
                   className='slide_img'
                   src={data.img}
                   alt={`Slide ${index + 1} - ${data.company}`}
+                  width={1920}
+                  height={1080}
                   loading='lazy'
                   decoding='async'
                   draggable='false'

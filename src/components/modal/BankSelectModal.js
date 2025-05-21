@@ -3,6 +3,7 @@ import { DEPOSIt_BANK_LIST } from '../../data/staticData';
 import { ReactComponent as CancelSvg } from '../../../assets/svg/bank_select_modal_cancel.svg';
 import { useModalStore } from '../../store/useModalStore';
 import useScrollLock from '../../hooks/useScrollLock';
+import Image from 'next/image';
 
 function BankSelectModal({ selectedBanks, setSelectedBanks }) {
   const [tempBanks, setTempBanks] = useState([]);
@@ -69,7 +70,7 @@ function BankSelectModal({ selectedBanks, setSelectedBanks }) {
               key={b.id}
               className={`rate_bank_modal_item ${tempBanks.includes(b.id) ? 'selected' : ''}`}
               onClick={() => handleBankClick(b.id)}>
-              <img src={b.img} alt={b.id} loading='lazy' draggable='false' />
+              <Image src={b.img} alt={b.id} width={24} height={24} />
               <span>{b.id}</span>
             </button>
           ))}

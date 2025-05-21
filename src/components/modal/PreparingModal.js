@@ -1,4 +1,5 @@
-import { ReactComponent as CancelSvg } from '../../assets/svg/modal_cancel.svg';
+import Image from 'next/image';
+import cancelIcon from '../../assets/svg/modal_cancel.svg';
 import useScrollLock from '../../hooks/useScrollLock';
 
 function PreparingModal({ onClose }) {
@@ -8,7 +9,7 @@ function PreparingModal({ onClose }) {
     <div className='rate_detail_modal_overlay' onClick={onClose}>
       <div className='preparing_modal_container' onClick={e => e.stopPropagation()}>
         <button className='preparing_modal_cancel_btn' onClick={onClose}>
-          <CancelSvg />
+          <Image src={cancelIcon} alt='닫기' width={24} height={24} />
         </button>
 
         <div className='preparing_modal_content'>

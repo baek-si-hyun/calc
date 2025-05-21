@@ -1,4 +1,3 @@
-import '../scss/index.scss';
 import '../config/firebaseConfig';
 import localFont from 'next/font/local';
 import MainContainer from './MainContainer';

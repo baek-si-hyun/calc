@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { ReactComponent as CancelSvg } from '../../../assets/svg/modal_cancel.svg';
 import useScrollLock from '../../hooks/useScrollLock';
 import { useModalStore } from '../../store/useModalStore';
+import Image from 'next/image';
 
 function LoanRateDetailModal({ data, setDetailModal }) {
   const containerRef = useRef(null);
@@ -26,7 +27,7 @@ function LoanRateDetailModal({ data, setDetailModal }) {
         <div className='rate_detail_modal_header'>
           <div className='rate_detail_modal_header_content'>
             <div className='rate_detail_modal_img_box'>
-              <img src={data.img} alt={data.bank} />
+              <Image src={data.img} alt={data.bank} width={24} height={24} />
             </div>
             <div className='rate_detail_modal_header_title'>
               <span>{data.loan_type}</span>

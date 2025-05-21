@@ -170,9 +170,11 @@ export default function HomePage() {
               href='https://returnplus.kr/'
               target='_blank'
               rel='noopener noreferrer'>
-              <img
+              <Image
                 src='https://imagedelivery.net/4aEUbX05h6IovGOQjgkfSw/32082eef-7c0f-4baa-e8e3-d5497e04bb00/public'
                 alt='banner'
+                width={300}
+                height={200}
                 className='fixed_banner_img'
               />
               <span className='fixed_banner_content'>
